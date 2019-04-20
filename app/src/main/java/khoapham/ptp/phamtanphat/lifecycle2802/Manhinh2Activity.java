@@ -1,41 +1,27 @@
 package khoapham.ptp.phamtanphat.lifecycle2802;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class Manhinh2Activity extends AppCompatActivity {
 
-    TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d("BBB","onCreate");
-        txt = findViewById(R.id.textview);
-
-        txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Manhinh2Activity.class);
-                startActivity(intent);
-            }
-        });
+        Log.d("BBB","onCreate-2");
 
     }
 
     @Override
     protected void onStart() {
-        Log.d("BBB","onStart");
+        Log.d("BBB","onStart-2");
         super.onStart();
     }
 
     @Override
     protected void onResume() {
-        Log.d("BBB","onResume");
+        Log.d("BBB","onResume-2");
         super.onResume();
         finish();
     }
@@ -43,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     //Chi su dung camera
     @Override
     protected void onPause() {
-        Log.d("BBB","onPause");
+        Log.d("BBB","onPause-2");
 
         super.onPause();
     }
@@ -51,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("BBB","onStop");
+        Log.d("BBB","onStop-2");
     }
 
     // do camera tra hinh ve
@@ -59,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
     // man hinh truoc tro ve
     @Override
     protected void onRestart() {
-        Log.d("BBB","onRestart");
+        Log.d("BBB","onRestart-2");
         super.onRestart();
     }
 
     @Override
     protected void onDestroy() {
-        Log.d("BBB","onDestroy");
+        Log.d("BBB","onDestroy-2");
         super.onDestroy();
     }
 }
