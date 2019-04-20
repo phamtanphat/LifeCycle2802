@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("BBB","onCreate");
         txt = findViewById(R.id.textview);
 
+
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         Log.d("BBB","onResume");
         super.onResume();
-        finish();
+
     }
 
     //Chi su dung camera
@@ -60,9 +61,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         Log.d("BBB","onRestart");
+
         super.onRestart();
     }
 
+    //Neu trở về màn hình trước bằng nút back thì màn hình hiện tại gọi onDestroy
+    //Nếu như gọi intent thì màn hình chuyển qua nó sẽ gọi lại từ oncreate
+    //Khi chuyển qua màn hình khác màn hình hiện tại không còn lưu dữ liệu thì nên gọi finish() để kết thúc
     @Override
     protected void onDestroy() {
         Log.d("BBB","onDestroy");

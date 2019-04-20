@@ -6,6 +6,7 @@ import android.util.Log;
 
 public class Manhinh2Activity extends AppCompatActivity {
 
+    static String a = "10";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class Manhinh2Activity extends AppCompatActivity {
     protected void onResume() {
         Log.d("BBB","onResume-2");
         super.onResume();
-        finish();
+
     }
 
     //Chi su dung camera
@@ -53,5 +54,11 @@ public class Manhinh2Activity extends AppCompatActivity {
     protected void onDestroy() {
         Log.d("BBB","onDestroy-2");
         super.onDestroy();
+    }
+
+    // man hinh hien tai dang dung se goi den onDestroy
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
